@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.form-container {
+    display: inline-block;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 100px; /* Adjust the width as needed */
+    padding-right: 10px;
+    text-align: right;
+}
+
+.form-group input {
+    flex: 1;
+}
+
+.form-group input[type="submit"] {
+    margin-left: 110px; /* Adjust to align the submit button */
+}
