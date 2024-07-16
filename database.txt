@@ -1,0 +1,6 @@
+foods
+CREATE TABLE `deneme`.`foods` (`id` INT(10) NOT NULL AUTO_INCREMENT , `title` VARCHAR(250) NOT NULL , `price` INT(10) NOT NULL , `image_name` VARCHAR(250) NOT NULL , `active` VARCHAR(250) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+users
+CREATE TABLE `deneme`.`users` (`id` INT(10) NOT NULL AUTO_INCREMENT , `name` INT(250) NOT NULL , `password` VARCHAR(250) NOT NULL , `department` VARCHAR(250) NOT NULL , `balance` INT(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+orders
+CREATE TABLE `deneme`.`orders` (`id` INT(10) NOT NULL AUTO_INCREMENT , `order_id` VARCHAR(250) NOT NULL, `food` VARCHAR(250) NOT NULL , `price` INT(250) NOT NULL , `qty` INT(100) NOT NULL , `total` INT(100) NOT NULL , `order_date` VARCHAR(250) NOT NULL , `status` VARCHAR(250) NOT NULL , `u_id` INT(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

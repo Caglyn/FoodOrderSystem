@@ -10,6 +10,7 @@
 
         $name = mysqli_real_escape_string($connect, $_POST['name']);
         $password = mysqli_real_escape_string($connect, $_POST['password']);
+        $department = mysqli_real_escape_string($connect, $_POST['department']);
 
         //ŞİFREYİ HASHLE!!!!!!!
         //Check Name and password and also check if user exists
@@ -25,7 +26,7 @@
                 $errorMsg = "Bu isimde kullanıcı bulunuyor, başka isimle tekrar deneyin";
             } else {
                 // Insert user data to database
-                $query = "INSERT INTO $userTable (name, password, balance) VALUES ('$name', '$password', 0)";
+                $query = "INSERT INTO $userTable (name, password, department, balance) VALUES ('$name', '$password', '$department', 0)";
                 $result = mysqli_query($connect, $query);
 
                 if ($result == true) {
@@ -75,10 +76,15 @@
                 <input type="text" name="name" id="inputName"  class="form-control">
             </div>
         
-        <div class="mb-3">
-          <label for="exampleInputPassword" class="form-label">Şifre</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword" aria-describedby="emailHelp">
-        </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Şifre</label>
+                <input type="password" name="password" class="form-control" id="inputPassword">
+            </div>
+
+            <div>
+                <label for="inputDepartment" class="form-label">Departman</label>
+                <input type="text" name="department" class="form-control" id="inputDepartment">
+            </div>
 
         <p>Hesabınız varsa: <a href="<?php echo $loginPage; ?>" >Giriş yap</a></p>
 

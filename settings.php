@@ -2,14 +2,21 @@
 
     if($locker = 1){
 
+        define('SITEURL', 'http://localhost/FoodOrderSystem/');
+        
         $dbHost = "localhost";
         $dbUsername = "osmancan";
         $dbPassword = "1234";
         $dbName = "deneme";
 
+        //Tables
         $userTable = "users";
         $adminTable = "admin";
+        $foodsTable = "foods";
+        $ordersTable = "orders";
 
+        //Pages
+        $cartPage = "cart.php";
         $registerPage = "register.php";
         $loginPage = "login.php";
         $logoutPage = "logout.php";

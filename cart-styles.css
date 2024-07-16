@@ -1,0 +1,54 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.food-menu-img {
+    flex: 1;
+}
+
+.food-menu-desc {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.food-price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.total h3 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.total a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.total a:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
