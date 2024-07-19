@@ -8,5 +8,5 @@
     session_unset();
     session_destroy();
     
-    header("Location:$loginPage");
+    header("Location:" . SITEURL . "$loginPage");
 ?>

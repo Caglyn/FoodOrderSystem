@@ -1,7 +1,7 @@
 <?php
     // Include database connection and start session
     $locker = 1;
-    include("settings.php");
+    include("../settings.php");
     include("navbar.php");
 
     if (isset($_POST['key']) && isset($_POST['remove_qty'])) {

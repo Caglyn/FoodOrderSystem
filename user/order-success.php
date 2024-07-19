@@ -1,7 +1,7 @@
 <?php
     // Include database connection and start session
     $locker = 1;
-    include("settings.php");
+    include("../settings.php");
     include("navbar.php");
 
     // Fetch order details using the order ID
@@ -27,8 +27,7 @@
 <html>
 <head>
     <title>Sipariş Bilgileri</title>
-    <link rel="stylesheet" href="order-information-table.css"/>
-    
+    <link rel="stylesheet" href="../css/information-table.css"/>
 </head>
 <body>
     <div class="container">
@@ -52,7 +51,7 @@
         </table>
 
         <div class="text-center">
-            <a href="<?php echo SITEURL; ?>" class="btn btn-primary">Menü sayfasına dön</a>
+            <a href="user_active_order_list.php" class="btn btn-primary">Siparişlerim sayfasına git</a>
         </div>
     </div>
 </body>

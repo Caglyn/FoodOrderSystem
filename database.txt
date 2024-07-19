@@ -1,4 +1,4 @@
-foods
+menu
 CREATE TABLE `deneme`.`foods` (`id` INT(10) NOT NULL AUTO_INCREMENT , `title` VARCHAR(250) NOT NULL , `price` INT(10) NOT NULL , `image_name` VARCHAR(250) NOT NULL , `active` VARCHAR(250) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 users
 CREATE TABLE `deneme`.`users` (`id` INT(10) NOT NULL AUTO_INCREMENT , `name` INT(250) NOT NULL , `password` VARCHAR(250) NOT NULL , `department` VARCHAR(250) NOT NULL , `balance` INT(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

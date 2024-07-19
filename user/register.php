@@ -1,7 +1,7 @@
 <?php
     //Include Database Connection 
     $locker = 1;
-    include_once('settings.php');
+    include_once('../settings.php');
 
 
     //Register
@@ -50,50 +50,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="mb-3" style="margin-top:50px; text-align:center;font-size: 30px;">
+            Kayıt Ol
+    </div>
     
-<div class="container pb-2" style="margin-top:100px">
-<div class="row">
-  <div class="col-sm-3 col-md-4 col-lg-4"></div>
-  <div class="col-sm-7 col-md-6 col-lg-4 border p-5 rounded" style="margin-top:20px">
+    <div class="container pb-2" style="margin-top:50px">
+        <div class="row">
+            <div class="col-sm-3 col-md-4 col-lg-4"></div>
+            <div class="col-sm-7 col-md-6 col-lg-4 border p-5 rounded" style="margin-top:20px">
 
-  <?php
-    // Print Error Message
-    if (isset($errorMsg)) {
-        echo 
-        "<div class='alert alert-warning alert-dismissible fade show'>
-        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-        $errorMsg
-        </div>";
-    }
-?>
+                <?php
+                    // Print Error Message
+                    if (isset($errorMsg)) {
+                        echo 
+                        "<div class='alert alert-warning alert-dismissible fade show'>
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        $errorMsg
+                        </div>";
+                    }
+                ?>
 
-  <form action="" method="POST">
+                <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">İsim</label>
+                            <input type="text" name="name" id="inputName"  class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Şifre</label>
+                            <input type="password" name="password" class="form-control" id="inputPassword">
+                        </div>
+                        <div>
+                            <label for="inputDepartment" class="form-label">Departman</label>
+                            <input type="text" name="department" class="form-control" id="inputDepartment">
+                        </div>
 
-  <div class="mb-3">
-            <div class="row g-3">
-                <div class="col">
-                <label for="inputName" class="form-label">İsim</label>
-                <input type="text" name="name" id="inputName"  class="form-control">
+                        <p>Hesabınız varsa: <a href="<?php echo $loginPage; ?>" >Giriş yap</a></p>
+
+                        <input type="submit" class="btn btn-primary" name="register" value="Kayıt ol">
+                </form>
             </div>
-        
-            <div class="mb-3">
-                <label for="inputPassword" class="form-label">Şifre</label>
-                <input type="password" name="password" class="form-control" id="inputPassword">
-            </div>
-
-            <div>
-                <label for="inputDepartment" class="form-label">Departman</label>
-                <input type="text" name="department" class="form-control" id="inputDepartment">
-            </div>
-
-        <p>Hesabınız varsa: <a href="<?php echo $loginPage; ?>" >Giriş yap</a></p>
-
-        <input type="submit" class="btn btn-primary" name="register" value="Kayıt ol">
-</form>
-
+        </div>
     </div>
-    </div>
-</div>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 <?php
     //Include database connection
     $locker = 1;
-    include("settings.php");
+    include("../settings.php");
     include("navbar.php");
-    include("foods.php");
+    include("menu.php");
 ?>
 
 <!DOCTYPE html>

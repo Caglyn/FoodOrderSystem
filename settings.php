@@ -1,8 +1,7 @@
 <?php
-
     if($locker = 1){
 
-        define('SITEURL', 'http://localhost/FoodOrderSystem/');
+        define('SITEURL', 'http://localhost/FoodOrderSystem/user/');
         
         $dbHost = "localhost";
         $dbUsername = "osmancan";
@@ -12,17 +11,23 @@
         //Tables
         $userTable = "users";
         $adminTable = "admin";
-        $foodsTable = "foods";
+        $menuTable = "menu";
         $ordersTable = "orders";
 
-        //Pages
+        //Pages for users
         $cartPage = "cart.php";
         $registerPage = "register.php";
         $loginPage = "login.php";
-        $logoutPage = "logout.php";
+        $logoutPage = "../logout.php";
         $dashboardPage = "home.php";
-        $adminLoginPage = "admin_login.php";
-        $adminDashboardPage = "admin_dashboard.php";
+        $userActiveOrderPage = "user_active_order_list.php";
+
+        //Pages for admin
+        $adminLoginPage = "../admin/admin_login.php";
+        $activeOrdersPage = "active_order_list.php";
+        $pastOrdersPage = "past_order_list.php";
+        $userListPage = "user_list.php";
+        $menuPage = "menu_list.php";
 
         $connect = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
         //$connect = new mysqli("localhost", "demo1591", "80cb6390adT", "demo1591_osmancan");

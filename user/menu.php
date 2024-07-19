@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar-search.css"/>
+    <link rel="stylesheet" href="navbar.css"/>
 </head>
 <body>
 <section class="food-menu">
@@ -11,7 +11,7 @@
 
         <?php
             //Display foods that are active
-            $sql = "SELECT * FROM $foodsTable WHERE active='Yes'";
+            $sql = "SELECT * FROM $menuTable WHERE active='Evet'";
             $res = mysqli_query($connect, $sql);
             $count = mysqli_num_rows($res);
 
@@ -34,7 +34,7 @@
                                 }
                                 else{
                                     ?>
-                                    <img src="<?php echo SITEURL; ?>images/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curve">
+                                    <img src="<?php echo SITEURL; ?>../images/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curve">
                                     <?php
                                 }
                             ?>
