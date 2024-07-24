@@ -43,7 +43,7 @@
                 <th>İsim</th>
                 <th>Departman</th>
                 <th>Bakiye</th>
-                <th>Bakiye Artır</th>
+                <th>Bakiye Güncelle</th>
             </tr>
             <?php foreach ($user_details as $user) { ?>
             <tr>
@@ -53,8 +53,8 @@
                 <td>
                     <form action="update_balance.php" method="POST">
                         <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                        <input type="number" name="balance_increase" value="<?php echo number_format(0, 2, '.', ''); ?>" min="0" step="0.01" required>
-                        <input type="submit" value="Bakiye Artır" class="btn btn-primary">
+                        <input type="number" name="new_balance" value="<?php echo number_format((float)$menu['price'], 2, '.', ''); ?>" min="0" step="0.01" required>
+                        <input type="submit" value="Güncelle" class="btn btn-primary">
                     </form>
                 </td>
             </tr>

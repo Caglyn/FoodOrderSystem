@@ -19,7 +19,7 @@
                 <a href="<?php echo $userListPage; ?>">Kullanıcılar</a>
             </li>
             <li>
-                <a href="<?php echo $menuPage; ?>">Menü</a>
+                <a href="<?php echo $menuListPage; ?>">Menü</a>
             </li>
             <li>
                 <a href="<?php echo $activeOrdersPage; ?>">Aktif Siparişler</a>

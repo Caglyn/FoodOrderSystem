@@ -6,7 +6,7 @@
         $dbHost = "localhost";
         $dbUsername = "osmancan";
         $dbPassword = "1234";
-        $dbName = "deneme";
+        $dbName = "FoodOrderSystem";
 
         //Tables
         $userTable = "users";
@@ -27,7 +27,8 @@
         $activeOrdersPage = "active_order_list.php";
         $pastOrdersPage = "past_order_list.php";
         $userListPage = "user_list.php";
-        $menuPage = "menu_list.php";
+        $menuListPage = "menu_list.php";
+        $menuPage = "menu.php";
 
         $connect = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
         //$connect = new mysqli("localhost", "demo1591", "80cb6390adT", "demo1591_osmancan");
@@ -36,5 +37,4 @@
             die("Connection failed: " . $connect->connect_error);
         }
     }
-    
 ?>

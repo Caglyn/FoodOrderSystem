@@ -14,6 +14,8 @@
             $balance = $row['balance'];
         }
     }
+
+    $cart_count = isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qty')) : 0;
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +42,10 @@
                 <a href="<?php echo $userActiveOrderPage; ?>">Aktif Siparişim</a>
             </li>
             <li>
-                <a href="<?php echo $cartPage; ?>">Sepet</a>
+                <a href="<?php echo $cartPage; ?>">
+                    Sepet [
+                    <span><?php echo $cart_count; ?> ]</span>
+                </a>
             </li>
             <li>
                 <a href="<?php echo $logoutPage; ?>">Çıkış yap</a>

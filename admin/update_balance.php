@@ -2,11 +2,11 @@
     $locker = 1;
     include("../settings.php");
 
-    if (isset($_POST['user_id']) && isset($_POST['balance_increase'])) {
+    if (isset($_POST['user_id']) && isset($_POST['new_balance'])) {
         $user_id = $_POST['user_id'];
-        $balance_increase = floatval($_POST['balance_increase']);
+        $new_balance = floatval($_POST['new_balance']);
 
-        $query = "UPDATE $userTable SET balance = balance + $balance_increase WHERE id = $user_id";
+        $query = "UPDATE $userTable SET balance = $new_balance WHERE id = $user_id";
         $result = mysqli_query($connect, $query);
 
         if ($result) {
